@@ -17,7 +17,7 @@ const TaskForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (title && desc && priority && tag && dueDate) {
-      const res = await fetch(" http://10.175.74.225:5000/tasks/", {
+      const res = await fetch(" https://hustleboard-tv3y.onrender.com/tasks/", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,

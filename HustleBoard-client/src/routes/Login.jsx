@@ -15,7 +15,7 @@ const Home = () => {
   const [response, setResponse] = useState("");
 
   const handleSignUp = async () => {
-    const res = await fetch(" http://10.175.74.225:5000/api/v1/auth/register", {
+    const res = await fetch(" https://hustleboard-tv3y.onrender.com/api/v1/auth/register", {
       method: "POST",
       headers: {
         "content-Type": "application/json",
@@ -32,7 +32,7 @@ const Home = () => {
   };
 
   const handleLogin = async () => {
-    const res = await fetch(" http://10.175.74.225:5000/api/v1/auth/login", {
+    const res = await fetch(" https://hustleboard-tv3y.onrender.com/api/v1/auth/login", {
       method: "POST",
       headers: {
         "content-Type": "application/json",

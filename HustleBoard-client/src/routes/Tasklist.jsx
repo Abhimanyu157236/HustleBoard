@@ -13,7 +13,7 @@ const Tasklist = () => {
   const user = localStorage.getItem("name");
 
   const fetchTask = async () => {
-    const res = await fetch(" http://10.175.74.225:5000/tasks/", {
+    const res = await fetch(" https://hustleboard-tv3y.onrender.com/tasks/", {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -28,7 +28,7 @@ const Tasklist = () => {
 
   const handleDelete = async (id) => {
     alert("Are you sure you want to delete this task?");
-    const res = await fetch(` http://10.175.74.225:5000/tasks/${id}`, {
+    const res = await fetch(` https://hustleboard-tv3y.onrender.com/tasks/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Tasklist = () => {
   };
 
   const handleUpdate = async (id, newTitle, newDescription, completed) => {
-    const res = await fetch(` http://10.175.74.225:5000/tasks/${id}`, {
+    const res = await fetch(` https://hustleboard-tv3y.onrender.com/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const Tasklist = () => {
   };
 
   const toggleComplete = async (id) => {
-    const res = await fetch(` http://10.175.74.225:5000/tasks/${id}`, {
+    const res = await fetch(` https://hustleboard-tv3y.onrender.com/tasks/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

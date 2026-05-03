@@ -13,7 +13,7 @@ const Dashboard = () => {
   const token = localStorage.getItem("token");
 
   const fetchTask = async () => {
-    const res = await fetch(" http://10.175.74.225:5000/tasks/", {
+    const res = await fetch(" https://hustleboard-tv3y.onrender.com/tasks/", {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
